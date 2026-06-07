@@ -1,5 +1,7 @@
 # Job Tracker API
 
+![Tests](https://github.com/nnamokoejike/job-tracker-api/actions/workflows/tests.yml/badge.svg)
+
 A production-style backend application for tracking job applications built with FastAPI and PostgreSQL.
 
 ## Features
