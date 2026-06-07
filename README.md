@@ -79,6 +79,24 @@ Swagger Documentation:
 http://127.0.0.1:8000/docs
 ```
 
+## Architecture
+
+The application follows a layered architecture:
+
+- API Layer (Routes)
+- Service Layer (Business Logic)
+- Database Layer (SQLAlchemy ORM)
+- Authentication Layer (JWT)
+- Migration Layer (Alembic)
+
+### Request Flow
+
+Client Request
+→ FastAPI Route
+→ Service Layer
+→ Database Layer
+→ Response
+
 ## Running Tests
 
 ```bash
