@@ -3,6 +3,8 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.db.base import Base
+from app.db.session import engine
 
 
 @pytest.fixture
@@ -41,3 +43,10 @@ def auth_headers(auth_token):
     return {
         "Authorization": f"Bearer {auth_token}"
     }
+
+
+@pytest.fixture(scope="session", autouse=True)
+def create_test_database():
+    Base.metadata.create_all(bind=engine)
+    yield
+    Base.metadata.drop_all(bind=engine)
