@@ -18,6 +18,27 @@ A production-style backend application for tracking job applications built with 
 * Application Logging
 * Automated Testing with Pytest
 
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Login and receive JWT token |
+| GET | `/auth/me` | Get current authenticated user |
+
+### Job Applications
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/job-applications/` | Create job application |
+| GET | `/job-applications/` | Get all applications with filtering, search, pagination and sorting |
+| GET | `/job-applications/{id}` | Get one application |
+| PATCH | `/job-applications/{id}` | Update application |
+| DELETE | `/job-applications/{id}` | Delete application |
+| GET | `/job-applications/stats/summary` | Get analytics summary |
+
 ## Tech Stack
 
 * FastAPI
