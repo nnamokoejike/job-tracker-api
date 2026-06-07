@@ -115,6 +115,12 @@ Current Test Coverage:
 
 Total: 18 Automated Tests
 
+## Live Demo
+
+Swagger API Documentation:
+
+https://job-tracker-api-4lc5.onrender.com/docs
+
 ## Logging
 
 Application logs are written to:
